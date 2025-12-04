@@ -135,7 +135,7 @@ def diff():
 
 @app.route("/")
 def root():
-    return send_from_directory(".", "main.html")
+    return send_from_directory(".", "index.html")
 
 @app.route("/<path:path>")
 def static_proxy(path):
