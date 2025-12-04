@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Snapshot & Diff</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<section class="section-padding" style="background-color: var(--bg-dark);">
+    <div class="container">
+
+        <h2 class="heading-title text-center" style="margin-bottom: 2rem;">
+            Upload Folder Snapshot
+        </h2>
+
+        <!-- SNAPSHOT -->
+        <div class="use-case-card use-case-card-2">
+
+            <label class="card-text">Select Folder</label>
+            <input type="file" id="folder-upload"
+                webkitdirectory directory multiple
+                style="padding: 0.75rem; border-radius: 6px; width: 100%;">
+
+            <label class="card-text" style="margin-top: 1rem;">Snapshot ID</label>
+            <input type="text" id="snapshot-id"
+                placeholder="e.g., S1"
+                style="padding: 0.75rem; width: 100%; border-radius: 6px;">
+
+            <button id="upload-snapshot-btn" class="cta-btn" style="margin-top: 1rem;">
+                Create Snapshot
+            </button>
+
+            <p id="snapshot-status" class="card-text" style="margin-top: 0.5rem;"></p>
+        </div>
+
+        <!-- DIFF -->
+        <div class="use-case-card use-case-card-1" style="margin-top: 2rem;">
+
+            <label class="card-text">Snapshot A</label>
+            <input type="text" id="diff-id-a" style="padding: 0.75rem; width: 100%; border-radius: 6px;">
+
+            <label class="card-text" style="margin-top: 1rem;">Snapshot B</label>
+            <input type="text" id="diff-id-b" style="padding: 0.75rem; width: 100%; border-radius: 6px;">
+
+            <button id="run-diff-btn" class="cta-btn" style="margin-top: 1rem;">
+                Run Diff
+            </button>
+
+            <ul id="diff-summary" style="margin-top: 1rem;"></ul>
+        </div>
+
+    </div>
+</section>
+
+<script src="index.js" defer></script>
+<script>lucide.createIcons();</script>
+
+</body>
+</html>
